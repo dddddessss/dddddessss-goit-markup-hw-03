@@ -10,20 +10,21 @@
   --button-active-text: rgba(255, 255, 255, 1);
   --h1-coolor: rgba(244, 244, 253, 1);
   --body-back: #ffffff;
-
 }
 
 body {
   background-color: var(--body-back);
   color: var(--primary-color);
+
   font-family: Roboto, sans-serif;
   font-size: 16px;
- 
 }
 
 /* ________________---------BASE--------______________ */
 .list {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .unline {
@@ -32,7 +33,7 @@ body {
 
 .unline:hover,
 .unline:focus {
-  color: var(--primary-color);
+  color: var(--button-active);
 }
 
 .navy {
@@ -57,63 +58,49 @@ body {
   overflow: hidden;
 }
 
+.container {
+  width: 1158px;
+  padding: 0 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container-filter {
+  display: flex;
+  justify-content: space-between;
+  width: 519px;
+  margin-top: 96px;
+  margin-bottom: 0;
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page-header {
+  border-bottom:1px solid var(--footer-text-color);
+}
+
 /* ________________---------BASE--------______________ */
 
 /* ________________---------MAIN--------______________ */
 
-.back-hero-foooter {
-  background-color: var(--primary-color);
+.nav {
+  display: flex;
+  margin: 0;
+  padding: 0;
 }
 
-.section-hero {
-  color: var(--h1-coolor);
+.nav-logo {
+  display: flex;
+  align-items: center;
+  min-height: 72px;
 }
-
-.section-team {
-  background-color: var(--our-team-color);
-}
-.footer-text {
-  color: var(--footer-text-color);
-}
-
-/* .site-nav .unline.current {
-color: deeppink;
-}  */
-
-/* ________________---------MAIN--------______________ */
-
-/* ________________---------BUTTONS--------______________ */
-
-.button-hero {
-  background-color: var(--accent-color);
-  color: var(--button-active-text);
-  cursor: pointer;
-  font-family: inherit;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-}
-
-.button.secondary {
-  background-color: var(--button-unactive);
-  color: var(--accent-color);
-  cursor: pointer;
-  font-family: inherit;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
-}
-.button.secondary:hover,
-.button.secondary:focus {
-  background-color: var(--button-active);
-  color: var(--button-active-text);
- 
-}
-
-/* ________________---------FONTS--------______________ */
 
 .logo {
+  display: inline-block;
+  
+
+  text-decoration: none;
   color: var(--primary-color);
   font-family: Raleway, sans-serif;
   font-weight: 800;
@@ -122,59 +109,299 @@ color: deeppink;
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
+
+.site-nav {
+  display: flex;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 216px;
+}
+.site-nav-listed {
+  display: inline-block;
+
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.address {
+  margin-left: auto;
+}
+
+.contact {
+  display: flex;
+  margin: 0;
+  padding: 0;
+
+  font-style: normal;
+  line-height: 1.5;
+}
+
+.site-nav .item + .item {
+  margin-left: 40px;
+}
+
+.contact .item + .item {
+  margin-left: 40px;
+}
+.section-hero {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 600px;
+  background-color: var(--primary-color);
+  color: var(--h1-coolor);
+}
+.button-hero {
+  display: inline-block;
+  margin-top: 48px;
+  min-width: 169px;
+  border-radius: 4px;
+  padding: 16px 32px;
+  background-color: var(--accent-color);
+  color: var(--button-active-text);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.button-hero:hover,
+.button-hero:focus {
+  background-color: var(--button-active);
+}
+
+.back-hero-foooter {
+  background-color: var(--primary-color);
+}
+
+.hero-header {
+  display: inline-block;
+  width: 496px;
+
+  margin-top: 188px;
+  margin-bottom: 0;
+  padding: 0;
+
+  font-size: 56px;
+  line-height: 1.07;
+  text-align: center;
+}
+.section-features {
+  display: flex;
+  margin-top: 120px;
+}
+
+.features {
+  display: flex;
+}
+.features .item {
+  display: inline-block;
+  width: 264px;
+  height: 104px;
+}
+.wawd {
+  display: flex;
+  margin-top: 120px;
+  flex-direction: row;
+}
+.header-wawd {
+  margin: 0;
+  padding: 0;
+
+  font-size: 36px;
+  line-height: 1.11;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.wawd-list {
+  margin-top: 72px;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.wawd-list .item {
+  display: inline-block;
+}
+
+.wawd-list .item + .item {
+  margin-left: 20px;
+}
+
+.header-feat {
+  display: inline-block;
+  width: 264px;
+  height: 24px;
+  margin: 0;
+  padding: 0;
+
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.text-feat {
+  display: inline-block;
+  width: 264px;
+  height: 72px;
+  margin-top: 8px;
+  margin-bottom: 0;
+  margin-right: 0;
+  padding: 0;
+
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.section-features .item + .item {
+  margin-left: 20px;
+}
+
+.section-team {
+  display: flex;
+  flex-direction: row;
+  margin-top: 120px;
+  background-color: var(--our-team-color);
+}
+
+.header-team {
+  margin: 0;
+  padding-top: 120px;
+  font-size: 36px;
+  line-height: 1.11;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.team-list {
+  display: flex;
+  margin-top: 72px;
+  margin-bottom: 120px;
+  padding: 0;
+}
+
+.team-list .item + .item {
+  margin-left: 24px;
+}
+
+.header-card {
+  margin-top: 32px;
+  margin-bottom: 0;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.text-team {
+  margin-top: 8px;
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+.footer {
+  height: 310px;
+}
+
+.container-footer{
+  padding-top: 100px;
+}
+  
+
+.footer-text {
+
+  margin-top: 16px;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+
+  padding: 0;
+  width: 264px;
+  height: 72px;
+  line-height: 1.5;
+  color: var(--footer-text-color);
+}
+
+
+.filter {
+
+  display: flex;
+  flex-wrap:wrap ;
+  margin-top: 96px;
+
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.filter-buttons .item +.item {
+  margin-left: 48px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+
+
+  margin-top: 24px;
+  margin-bottom: 119px;
+  margin-left: -12px;
+  margin-right: -12px; 
+}
+
+.cards .item {
+  margin-left: 12px;
+  margin-right: 12px;
+  margin-top: 47px;
+  border-bottom: 1px solid #E7E9FC;;
+}
+/* .site-nav .unline.current {
+color: deeppink;
+}  */
+
+/* ________________---------MAIN--------______________ */
+
+/* ________________---------BUTTONS--------______________ */
+
+
+
+.button.secondary {
+  min-width: 69px;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  padding: 12px 24px;
+
+
+  background-color: var(--button-unactive);
+  color: var(--accent-color);
+  cursor: pointer;
+
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  text-align: center;
+}
+.button.secondary:hover,
+.button.secondary:focus {
+  background-color: var(--button-active);
+  color: var(--button-active-text);
+}
+
+/* ________________---------FONTS--------______________ */
+
 .logo-web {
   color: var(--accent-color);
 }
 .logo-studio {
   color: var(--footer-logo-color);
-
-}
-.site-nav-listed {
-  font-weight: 500;
-  line-height: 1.5;
-}
-.contacts {
-  font-style: normal;
-  line-height: 1.5;
 }
 
-.hero-header {
-  font-size: 56px;
-  line-height: 1.07;
-  text-align: center;
-}
-
-.header-feat {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-}
-.text-feat {
-  font-size: 16px;
-  line-height: 1.5;
-}
-.header-wawd {
-  font-size: 36px;
-  line-height: 1.11;
-  text-align: center;
-  text-transform: capitalize;
-}
-.header-team {
-  font-size: 36px;
-  line-height: 1.11;
-  text-align: center;
-  text-transform: capitalize;
-}
-.header-card {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-}
-.text-team {
-  line-height: 1.5;
-}
-
-.footer-text {
-
-  line-height: 1.5;}
 /* ________________---------FONTS--------______________ */
