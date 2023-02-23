@@ -330,6 +330,7 @@ img {
 .filter {
   margin: 0;
   padding-top: 96px;
+  padding-bottom: 120px;
 }
 
 .filter-buttons {
@@ -345,9 +346,9 @@ img {
   display: flex;
   flex-wrap: wrap;
   margin: 0;
+  margin-top: 72px;
   gap: 24px;
   row-gap: 48px;
-  padding-top: 72px;
   
 }
 
